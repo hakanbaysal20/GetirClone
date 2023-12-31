@@ -20,9 +20,9 @@
         android:layout_height="50dp"
         android:background="@color/brandYellow"
         android:fontFamily="sans-serif"
+        android:gravity="center"
         android:text="TVS\n10-15 dk"
         android:textAlignment="center"
-        android:gravity="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,6 +31,9 @@
         android:id="@+id/pageViewRV"
         android:layout_width="0dp"
         android:layout_height="215dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner2" />

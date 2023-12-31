@@ -22,11 +22,14 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="28dp"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/navigation_bottom_bar" >
+        app:menu="@menu/navigation_bottom_bar">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
@@ -46,20 +49,21 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabButton"
+        style="@style/CustomFloatingActionButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        style="@style/CustomFloatingActionButtonStyle"
-        android:contentDescription="cart"
-        android:clickable="true"
-        app:tint="@color/brandYellow"
         android:backgroundTint="@color/primaryColor"
+        android:clickable="true"
+        android:contentDescription="cart"
+        app:elevation="12dp"
         app:fabCustomSize="80dp"
-        app:maxImageSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_fab" />
+        app:maxImageSize="50dp"
+        app:srcCompat="@drawable/ic_fab"
+        app:tint="@color/brandYellow" />
 
     <ImageView
         android:id="@+id/imageView"

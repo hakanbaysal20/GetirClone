@@ -13,5 +13,8 @@
         <item name="cornerSize">50%</item>
     </style>
 
+
+
+
     <style name="Theme.GetirClone" parent="Base.Theme.GetirClone" />
 </resources>

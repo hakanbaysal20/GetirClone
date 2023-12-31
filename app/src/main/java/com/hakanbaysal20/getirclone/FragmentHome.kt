@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.hakanbaysal20.getirclone.databinding.FragmentHomeBinding
 
@@ -13,6 +14,8 @@ class FragmentHome : Fragment() {
     private lateinit var pageViewList:ArrayList<PageViewModel>
     private lateinit var adapter:PageViewAdapter
     private lateinit var categoryAdapter:CategoryViewAdapter
+    private val adress = ArrayList<String>()
+    private lateinit var adressAdapter:ArrayAdapter<String>
     private lateinit var categoryViewList:ArrayList<Category>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +28,12 @@ class FragmentHome : Fragment() {
         binding.pageViewRV.layoutManager = StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL)
         pageViewList = ArrayList<PageViewModel>()
         categoryViewList = ArrayList<Category>()
+        adress.add("Mehmet Akif  Ersoy mahallesi...")
+        adress.add("Mehmet Akif  Ersoy mahallesi...")
+        adress.add("Mehmet Akif  Ersoy mahallesi...")
+
+        adressAdapter = ArrayAdapter(requireContext(),android.R.layout.simple_list_item_1,android.R.id.text1,adress)
+        binding.spinner2.adapter = adressAdapter
 
         val c1 = Category("Süper İkili","im_super")
         val c2 = Category("İndirimler","im_discount")
