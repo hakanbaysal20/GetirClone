@@ -28,9 +28,9 @@ class FragmentHome : Fragment() {
         binding.pageViewRV.layoutManager = StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL)
         pageViewList = ArrayList<PageViewModel>()
         categoryViewList = ArrayList<Category>()
-        adress.add("Mehmet Akif  Ersoy mahallesi...")
-        adress.add("Mehmet Akif  Ersoy mahallesi...")
-        adress.add("Mehmet Akif  Ersoy mahallesi...")
+        adress.add("Ev,Mehmet Akif  Ersoy mahall...")
+        adress.add("Ev,Mehmet Akif  Ersoy mahall...")
+        adress.add("Ev,Mehmet Akif  Ersoy mahall...")
 
         adressAdapter = ArrayAdapter(requireContext(),android.R.layout.simple_list_item_1,android.R.id.text1,adress)
         binding.spinner2.adapter = adressAdapter
